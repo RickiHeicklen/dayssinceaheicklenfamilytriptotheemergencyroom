@@ -1,80 +1,92 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Days Since A Cryptocurrency Exchange Has Lost More Than $100 Million</title>
-    <script src="https://platform.twitter.com/widgets.js"></script>
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <!-- Dynamically replace this. -->
-    <link rel="shortcut icon" href="./images/unknown.ico" />
-  </head>
-  <body>
-    <header>
-      Days Since A Cryptocurrency Exchange Has Lost More Than $100 Million:
-    </header>
-    <div id="counter">
-      <img src="./images/loading.gif" alt="Loading..." />
-      <noscript>This Site Requires JavaScript</noscript>
-    </div>
-    <div id="latestTweet"></div>
-    <h2>Archive:</h2>
-    <div id="archiveTweets"></div>
-    <footer>
-      Hacked together one night by <a href="https://twitter.com/harryh">harryh</a>.<br/>
-      Inspired by <a href="https://twitter.com/patio11">Patrick McKenzie</a>. He also wrote the dynamic favicon JS.<br/>
-      Thanks to <a href="https://github.com/kkuchta">Kevin Kuchta</a> for submitting a pull request with most of the original JS.<br/>
-      Submit pull requests <a href="https://github.com/harryh/dayssinceacryptocurrencyexchangehaslostmorethan100million">here</a>
-    </footer>
-    
-    <script>
-      // --- Config ---
-      // add tweet ids to this tweet id whenever a crypto exchange loses $100+ million
-      // list should be in reverse chronological order
-      var tweetIds = [
-        '1121540324072067072',
-        '1091083661502377984',
-        '999317133975805952',
-        '962740918053888000',
-        '962149781400305664',
-        '957514764011298816',
-        '938519280240357376',
-        '760627527450624002',
-        '731733049847599104',
-      ];
-      // --------------
 
-      var latestTweetId = tweetIds[0];
-      var archiveTweetIds = tweetIds.slice(1);
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Days Since A Heicklen Family Trip to the ER</title>
+  <script src="https://platform.twitter.com/widgets.js"></script>
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <!-- Dynamically replace this. -->
+  <link rel="shortcut icon" href="./images/unknown.ico" />
+</head>
 
-      // Use latest tweet id to get the timestamp
-      var lastTweetTimestamp = Math.floor(latestTweetId / 4194304) + 1288834974657;
+<body>
+  <header>
+    Days Since A Heicklen Family Trip to the ER:
+  </header>
+  <div id="counter">
+    <img src="./images/loading.gif" alt="Loading..." />
+    <noscript>This Site Requires JavaScript</noscript>
+  </div>
+  <div id="latestTweet"></div>
+  <h2>Archive:</h2>
+  <div id="archiveTweets"></div>
+  <footer>
+    Forked from <a href="https://github.com/harryh/dayssinceacryptocurrencyexchangehaslostmorethan100million"
+      target="_blank">Days Since a Crypto Currency Exchange Has Lost More Than 100 Million</a>.<br />
+  </footer>
 
-      // Subtract from now and convert to days (from milliseconds)
-      var daysAgo = (new Date().getTime() - lastTweetTimestamp) / 1000 / 60 / 60 / 24;
-      var daysAgoInt = Math.floor(daysAgo);
+  <script>
 
-      // Update counter in HTML
-      var counterDiv = document.getElementById('counter');
-      counterDiv.textContent = daysAgoInt;
+    // This is the script from the original site, the tweets are commented out.
+    // It would display tweets from the list of tweetIds, but we're just using a hardcoded date that can get manually changed.
 
-      // dynamically replace favicon
-      var iconFilename = (daysAgoInt < 100) ? (daysAgoInt.toString()) : "unlikely";
-      iconFilename = "./images/" + iconFilename + ".ico";
-      var favicon = document.querySelector("link[rel*='icon']") || document.createElement('link');
-      favicon.rel = "shortcut icon";
-      favicon.href = iconFilename;
-      document.getElementsByTagName('head')[0].appendChild(favicon);
+    // // --- Config ---
+    // // add tweet ids to this tweet id whenever a crypto exchange loses $100+ million
+    // // list should be in reverse chronological order
+    // var tweetIds = [
+    //   '1121540324072067072',
+    //   '1091083661502377984',
+    //   '999317133975805952',
+    //   '962740918053888000',
+    //   '962149781400305664',
+    //   '957514764011298816',
+    //   '938519280240357376',
+    //   '760627527450624002',
+    //   '731733049847599104',
+    // ];
+    // // --------------
 
-      // Use twitter's widget js api to make a tweet widget out of the latest tweet id
-      var latest = twttr.widgets.createTweet(latestTweetId, document.getElementById('latestTweet'), {});
+    // var latestTweetId = tweetIds[0];
+    // var archiveTweetIds = tweetIds.slice(1);
 
-      // Fill in the archive tweets
-      var archiveTweetsDiv = document.getElementById('archiveTweets');
-      archiveTweets = archiveTweetIds.forEach(function(archiveTweetId) {
-        var tweetDiv = document.createElement('div');
-        archiveTweetsDiv.appendChild(tweetDiv);
-        twttr.widgets.createTweet(archiveTweetId, tweetDiv, {});
-      });
-    </script>
-  </body>
+    // // Use latest tweet id to get the timestamp
+    // var lastTweetTimestamp = Math.floor(latestTweetId / 4194304) + 1288834974657;
+
+    // Hardcoded date example: April 1, 2023
+    var hardcodedDate = new Date('2024-03-01T00:00:00Z');
+
+    var timestamp = hardcodedDate.getTime(); // change to lastTweetTimestamp if using tweet ids
+
+    // Subtract from now and convert to days (from milliseconds)
+    var daysAgo = (new Date().getTime() - timestamp) / 1000 / 60 / 60 / 24;
+    var daysAgoInt = Math.floor(daysAgo);
+
+    // Update counter in HTML
+    var counterDiv = document.getElementById('counter');
+    counterDiv.textContent = daysAgoInt;
+
+    // dynamically replace favicon
+    var iconFilename = (daysAgoInt < 100) ? (daysAgoInt.toString()) : "unlikely";
+    iconFilename = "./images/" + iconFilename + ".ico";
+    var favicon = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    favicon.rel = "shortcut icon";
+    favicon.href = iconFilename;
+    document.getElementsByTagName('head')[0].appendChild(favicon);
+
+    // // Use twitter's widget js api to make a tweet widget out of the latest tweet id
+    // var latest = twttr.widgets.createTweet(latestTweetId, document.getElementById('latestTweet'), {});
+
+    // // Fill in the archive tweets
+    // var archiveTweetsDiv = document.getElementById('archiveTweets');
+    // archiveTweets = archiveTweetIds.forEach(function(archiveTweetId) {
+    //   var tweetDiv = document.createElement('div');
+    //   archiveTweetsDiv.appendChild(tweetDiv);
+    //   twttr.widgets.createTweet(archiveTweetId, tweetDiv, {});
+    // });
+
+  </script>
+
+</body>
+
 </html>
