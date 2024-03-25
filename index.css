@@ -4,31 +4,37 @@ body {
   padding: 30px 30px 10px 30px;
 }
 
-div {
+/* div {
   margin-top: 20px;
   margin-bottom: 20px; 
-}
+} */
 
 header {
   font-size: 50px;
 }
 
-footer {
+/* footer {
   font-size: 20px;
   line-height: 25px;
   margin-top: 40px;
-}
+} */
 
 #counter {
   font-size: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px; 
 }
 
 #latestTweet {
   width: 40%;
   margin: 50px auto;
+  margin-top: 20px;
+  margin-bottom: 20px; 
 }
 
 #archiveTweets {
   width: 40%;
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px; 
 }

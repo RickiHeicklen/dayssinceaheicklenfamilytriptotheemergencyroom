@@ -1,0 +1,85 @@
+/* footer {
+  font-size: 20px;
+  line-height: 35px;
+  margin-top: 40px;
+  
+} */
+
+#bottom-bar {
+  font-size: 20px;
+  /* line-height: 45px; */
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eeeeee;
+  color: #008CBA;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 15px;
+  border-top: 2px solid rgb(170, 170, 170);
+}
+
+.left-content, .right-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: row; /* This makes the child divs align side by side */
+  flex-wrap: wrap; /* This allows items to wrap onto the next line if there's not enough space */
+  text-align: left;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: row; /* This makes the child divs align side by side */
+  flex-wrap: wrap; /* This allows items to wrap onto the next line if there's not enough space */
+  text-align: right;
+}
+
+.left-content a, .right-content a {
+  display: inline;
+  /* margin-left: 10px; */
+  color: #008CBA;
+}
+
+/* .right-content a {
+  margin-left: 10px;
+  color: #008CBA;
+  text-decoration: none;
+} */
+
+.left-content a:hover, .right-content a:hover {
+  color: #0077a8;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* This centers the text horizontally */
+  text-align: center; /* This ensures the text inside is centered if it wraps */
+}
+
+.name a {
+  color: #008CBA;
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* This centers the text horizontally */
+  text-align: center; /* This ensures the text inside is centered if it wraps */
+}
+
+.substack-icon svg {
+  vertical-align: middle; /* Adjusts the alignment vertically; you can use 'bottom', 'middle', or a specific length (e.g., '2px') */
+}
+
+.icon {
+  margin-right: 10px;
+}

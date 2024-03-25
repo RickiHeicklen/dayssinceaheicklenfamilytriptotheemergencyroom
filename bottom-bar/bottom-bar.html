@@ -1,0 +1,35 @@
+<!-- This is the bottom bar of the website. It contains the footer information and social media links. 
+To use it, copy all the contents of the folder, and then put the following in your html files:
+  <link rel="stylesheet" type="text/css" href="./bottom-bar/bottom-bar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WaIg8btvO6NehjzVrOjFrC/Z8QwI0FmJjKzezuFNmOFW8Gv+IgSULNf/1UGRRjzTJPTPuEh4tO4+4YsJNAMyQw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://use.fontawesome.com/efc83ea599.js"></script>
+  <script>
+    fetch('bottom-bar/bottom-bar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('include-bottom-bar').innerHTML = data;
+      });
+  </script>
+
+-->
+
+<div id="bottom-bar" style="clear: both;">
+  <div class="left-content">
+    <p>
+    Site maintained by <a href="https://www.rickiheicklen.com">Ricki Heicklen</a>. 
+    Forked from <a href="https://github.com/harryh/dayssinceacryptocurrencyexchangehaslostmorethan100million" target="_blank">
+    Days Since a Crypto Currency Exchange Has Lost More Than 100 Million</a>.
+    </p>
+  </div>
+  <div class="right-content">
+    <div class="icons">
+      <p>
+      <a href="https://bayesshammai.substack.com/" target="_blank" class="icon substack-icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 606 606" preserveAspectRatio="xMidYMid meet"><path fill="currentColor" d="M35 4L35 75L564 75L564 4L35 4M35 139L35 211L564 211L564 139L35 139M35 274L35 605C56.6208 598.76 78.3422 581.827 98 570.86L230 497.14C246.343 488.022 262.731 478.968 279 469.719C284.318 466.696 293.313 459.172 299.576 459.286C305.748 459.399 314.711 466.977 320 469.999C335.238 478.708 350.615 487.245 366 495.694C412.513 521.239 458.488 547.761 505 573.306C522.985 583.183 543.997 600.423 564 605L564 274L35 274z"/></svg></a>
+      <a href="https://twitter.com/tradegal_" target="_blank"><i class="icon fa fa-twitter fa-lg"></i></a>
+      <a href="https://github.com/RickiHeicklen" target="_blank"><i class="icon fa fa-github fa-lg"></i></a>
+      </p>
+    </div>
+    <div class="name">
+    <a href="https://www.rickiheicklen.com" target="_blank"><b>Ricki Heicklen</b></a>
+  </div>
+</div>

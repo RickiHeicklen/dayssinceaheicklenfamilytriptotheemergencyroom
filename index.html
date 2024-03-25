@@ -6,8 +6,27 @@
   <title>Days Since A Heicklen Family Trip to the ER</title>
   <script src="https://platform.twitter.com/widgets.js"></script>
   <link rel="stylesheet" type="text/css" href="./index.css" />
+  <link rel="stylesheet" type="text/css" href="./bottom-bar/bottom-bar.css" />
   <!-- Dynamically replace this. -->
   <link rel="shortcut icon" href="./images/unknown.ico" />
+
+  <script src="https://use.fontawesome.com/efc83ea599.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WaIg8btvO6NehjzVrOjFrC/Z8QwI0FmJjKzezuFNmOFW8Gv+IgSULNf/1UGRRjzTJPTPuEh4tO4+4YsJNAMyQw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <meta property="og:title" content="Days Since a Heicklen Family Trip to the ER" />
+  <meta property="og:description" content="For tracking our vacations to Holy Name" />
+  <!-- <meta property="og:image" content="icons/happy_tu_bshvat_cropped.png" /> -->
+  <!-- <meta property="og:url" content="www.itisajewishholidaytoday.com" /> -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LL5HKKBDL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7LL5HKKBDL');
+  </script>
 </head>
 
 <body>
@@ -18,12 +37,16 @@
     <img src="./images/loading.gif" alt="Loading..." />
     <noscript>This Site Requires JavaScript</noscript>
   </div>
-  <div id="latestTweet"></div>
+  <!-- <div id="latestTweet"></div>
   <h2>Archive:</h2>
-  <div id="archiveTweets"></div>
-  <footer>
+  <div id="archiveTweets"></div> -->
+  <!-- <footer>
     Forked from <a href="https://github.com/harryh/dayssinceacryptocurrencyexchangehaslostmorethan100million"
       target="_blank">Days Since a Crypto Currency Exchange Has Lost More Than 100 Million</a>.<br />
+  </footer> -->
+
+  <footer>
+    <div id="include-bottom-bar"></div>
   </footer>
 
   <script>
@@ -85,6 +108,14 @@
     //   twttr.widgets.createTweet(archiveTweetId, tweetDiv, {});
     // });
 
+  </script>
+
+  <script>
+    fetch('bottom-bar/bottom-bar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('include-bottom-bar').innerHTML = data;
+      });
   </script>
 
 </body>
