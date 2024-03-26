@@ -1,15 +1,17 @@
 <!-- 
 This is a complete HTML file that contains the bottom-bar. 
+You should save it as a separate top level file called bottom-bar.html.
+
 In your HTML files, you can include this file using the fetch API.
 You want to include these scripts in your head:
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WaIg8btvO6NehjzVrOjFrC/Z8QwI0FmJjKzezuFNmOFW8Gv+IgSULNf/1UGRRjzTJPTPuEh4tO4+4YsJNAMyQw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://use.fontawesome.com/efc83ea599.js"></script>
     <script>
-        fetch('bottom-bar-complete.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('include-bottom-bar').innerHTML = data;
-          });
+      fetch('bottom-bar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('include-bottom-bar').innerHTML = data;
+        });
     </script>
 
 And in your body, put:
@@ -52,6 +54,8 @@ And in your body, put:
 
         .left-content {
             text-align: left;
+            font-size: 12px;
+            color: grey;
         }
 
         .right-content {
@@ -79,6 +83,8 @@ And in your body, put:
         .name a {
             color: #008CBA;
             text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .icons {
@@ -93,12 +99,11 @@ And in your body, put:
         }
 
         .icon {
-            margin-right: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-WaIg8btvO6NehjzVrOjFrC/Z8QwI0FmJjKzezuFNmOFW8Gv+IgSULNf/1UGRRjzTJPTPuEh4tO4+4YsJNAMyQw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -113,6 +118,9 @@ And in your body, put:
             </p>
         </div>
         <div class="right-content">
+            <div class="name">
+                <a href="https://www.rickiheicklen.com" target="_blank"><b>Ricki Heicklen</b></a>
+            </div>
             <div class="icons">
                 <p>
                     <a href="https://bayesshammai.substack.com/" target="_blank" class="icon substack-icon"><svg
@@ -125,9 +133,6 @@ And in your body, put:
                     <a href="https://github.com/RickiHeicklen" target="_blank"><i
                             class="icon fa fa-github fa-lg"></i></a>
                 </p>
-            </div>
-            <div class="name">
-                <a href="https://www.rickiheicklen.com" target="_blank"><b>Ricki Heicklen</b></a>
             </div>
         </div>
 </body>
